@@ -37,11 +37,26 @@ pip install -r requirements.txt
 
 
 ## Training 
-Train the model with the following command:
-
+1. Data preparation for pre-training
+- We use MIMIC-CXR-JPG for pre-training. 
+- The file ``all_fl_train.csv`` includes two columns ``Path_frontal`` ，``Path_lateral`` and ``Report`` for each line, corresponding to (a) the path to an frontal image , (b) the path to an lateral  and (c) image the text of the corresponding report, respectively, which should be organized as follows:
+```
+      Path_frontal, Path_lateral,  Report
+      /path/to/fimg1.jpg, /path/to/limg1.jpg, FINAL REPORT  EXAMINATION: ...
+      /path/to/fimg2.jpg, /path/to/limg2.jpg, FINAL REPORT  CHEST: ...
+      ...,...
+```
+2. Start pre-training
+- Download the pre-trained weight of [Vit base](https://github.com/mindspore-ai/models/blob/master/research/cv/vit_base/README_CN.md) and [Bioclinical_BERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT/tree/main).
+- Set the data path, GPU IDs, batch size and other parameters in [run.sh](/F-L/run.sh).
+  
+3.Train the model with the following command:
 ```bash
 cd F-L
 bash run.sh
 ```
+## The pre-trained model checkpoint 
+Download the [pre-trained weight](https://pan.baidu.com/s/1tqM7JZraSnsUypO1ZUqF0g?pwd=rojq) 
+
 ## Acknowledgement
 This work is built upon the [MGCA](https://github.com/fuying-wang/MGCA) and [LIMITR](https://github.com/gefend/LIMITR).
