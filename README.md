@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ## Training 
 1. Data preparation for pre-training
 - We use MIMIC-CXR-JPG for pre-training. 
-- The file ``all_fl_train.csv`` includes two columns ``Path_frontal`` ，``Path_lateral`` and ``Report`` for each line, corresponding to (a) the path to an frontal image , (b) the path to an lateral  and (c) image the text of the corresponding report, respectively, which should be organized as follows:
+- The file ``all_fl_train.csv`` includes three columns ``Path_frontal`` ，``Path_lateral`` and ``Report`` for each line, corresponding to (a) the path to an frontal image , (b) the path to an lateral  and (c) the corresponding report, respectively, which should be organized as follows:
 ```
       Path_frontal, Path_lateral, Report
       /path/to/fimg1.jpg, /path/to/limg1.jpg, FINAL REPORT  EXAMINATION: ...
