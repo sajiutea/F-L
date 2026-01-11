@@ -9,7 +9,7 @@ Extensive experiments across seven public datasets demonstrate that our framewor
 ![F-L](framework.png)
 
 ## Installation
-We used Python 3.8.20 with pytorch 2.0.0 
+We used Python 3.8.2 with pytorch 2.0.0 
 
 To clone this repository:
 ```shell
