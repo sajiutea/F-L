@@ -13,7 +13,7 @@ We used Python 3.8.20 with pytorch 2.0.0
 
 To clone this repository:
 ```shell
-git clone https://github.com/sajiutea/F-L/F-L.git
+git clone https://github.com/sajiutea/F-L.git
 ```
 
 To install Python requirements:
